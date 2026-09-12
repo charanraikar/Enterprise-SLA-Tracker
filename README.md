@@ -47,29 +47,28 @@ If a ticket is resolved after its SLA deadline, it is marked as `SLA Breached`. 
 
 ```text
 enterprise_sla_tracker/
-â”œâ”€â”€ app/
-â”‚   â”œâ”€â”€ main.py              # FastAPI routes
-â”‚   â”œâ”€â”€ database.py          # Database connection and ticket repository
-â”‚   â”œâ”€â”€ sla.py               # SLA deadline and breach logic
-â”‚   â”œâ”€â”€ analytics.py         # Analytics summary logic
-â”‚   â”œâ”€â”€ schemas.py           # Request models
-â”‚   â””â”€â”€ seed.py              # Sample ticket data
-â”œâ”€â”€ docs/
-â”‚   â”œâ”€â”€ requirements.md
-â”‚   â”œâ”€â”€ test_cases.md
-â”‚   â”œâ”€â”€ release_notes.md
-â”‚   â””â”€â”€ interview_explanation.md
-â”œâ”€â”€ postman/
-â”‚   â””â”€â”€ Service_Request_SLA_Tracker.postman_collection.json
-â”œâ”€â”€ scripts/
-â”‚   â””â”€â”€ export_sample_analytics.py
-â”œâ”€â”€ sql/
-â”‚   â””â”€â”€ mysql_schema.sql
-â”œâ”€â”€ tests/
-â”‚   â””â”€â”€ test_sla_logic.py
-â”œâ”€â”€ requirements.txt
-â””â”€â”€ README.md
-```
+|-- app/
+|   |-- main.py              # FastAPI routes
+|   |-- database.py          # Database connection and ticket repository
+|   |-- sla.py               # SLA deadline and breach logic
+|   |-- analytics.py         # Analytics summary logic
+|   |-- schemas.py           # Request models
+|   `-- seed.py              # Sample ticket data
+|-- docs/
+|   |-- requirements.md
+|   |-- test_cases.md
+|   |-- release_notes.md
+|   `-- interview_explanation.md
+|-- postman/
+|   `-- Service_Request_SLA_Tracker.postman_collection.json
+|-- scripts/
+|   `-- export_sample_analytics.py
+|-- sql/
+|   `-- mysql_schema.sql
+|-- tests/
+|   `-- test_sla_logic.py
+|-- requirements.txt
+`-- README.md
 
 ## Run Locally
 
