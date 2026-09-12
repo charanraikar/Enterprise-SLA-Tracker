@@ -1,0 +1,84 @@
+{
+  "info": {
+    "name": "Service Request SLA Tracker",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/health"
+      }
+    },
+    {
+      "name": "Create Ticket",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"client_name\": \"ABC Retail\",\n  \"title\": \"Sales dashboard data mismatch\",\n  \"description\": \"Client reported mismatch between dashboard and source report\",\n  \"category\": \"Data Issue\",\n  \"priority\": \"High\",\n  \"owner\": \"Charan\"\n}"
+        },
+        "url": "{{base_url}}/tickets"
+      }
+    },
+    {
+      "name": "List Tickets",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/tickets"
+      }
+    },
+    {
+      "name": "Get Ticket By Id",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/tickets/1"
+      }
+    },
+    {
+      "name": "Update Ticket Status",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"Resolved\"\n}"
+        },
+        "url": "{{base_url}}/tickets/1/status"
+      }
+    },
+    {
+      "name": "Analytics Summary",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/analytics/summary"
+      }
+    },
+    {
+      "name": "Analytics CSV Export",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/analytics/export.csv"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    }
+  ]
+}
+
