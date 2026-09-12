@@ -115,13 +115,7 @@ export MYSQL_DATABASE=sla_tracker
 uvicorn app.main:app --reload
 ```
 
-## Interview Explanation
 
-Use this short explanation:
-
-```text
-I built a service request tracking prototype for IT support and consulting workflows. It lets users create client issues, assign priority and owners, track status changes, calculate SLA deadlines and identify SLA breaches. I used FastAPI for APIs, SQLite locally with a MySQL-ready schema, and Python analytics to summarize breach percentage, ticket categories and resolution trends. I also prepared Postman test cases and functional documentation.
-```
 
 Be honest if asked:
 
