@@ -117,9 +117,3 @@ uvicorn app.main:app --reload
 
 
 
-Be honest if asked:
-
-```text
-This was a self-built prototype inspired by enterprise service management workflows, not a company project.
-```
-
